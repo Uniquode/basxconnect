@@ -98,17 +98,18 @@ def contact_details_naturalperson(request):
 def personal():
     return C(
         hg.H4("Personal"),
-        R(C(F("profession"))),
+        R(C(F("profession"), width=8, breakpoint="lg")),
         R(
-            C(F("date_of_birth")),
+            C(F("date_of_birth"), width=6, breakpoint="lg"),
+            C(width=2, breakpoint="lg"),
             C(
                 F(
                     "deceased",
                     elementattributes={"_class": "standalone"},
                 ),
-                width=4,
+                width=3,
                 breakpoint="lg",
             ),
-            C(F("decease_date"), width=4, breakpoint="lg"),
+            C(F("decease_date"), width=5, breakpoint="lg"),
         ),
     )
